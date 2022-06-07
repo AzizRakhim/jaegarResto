@@ -1,0 +1,92 @@
+.navBar{
+  width: 100%;
+  max-width: 104px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #1f1d2b;
+  border-radius: 0 16px 16px 0;
+}
+
+.navBar__logo-box{
+  padding: 24px 24px 16px 24px;
+}
+
+
+.navBar__logo-container{
+  background: #eb956a45;
+  border-radius: 12px;
+  padding: 11px 11px 13px 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  .bx{
+    color: #fff;
+    font-size: 30px;
+  }
+}
+
+.navBar__list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navBar__item{
+  padding: 10px 0 12px 12px;
+}
+
+.navBar__holder{
+  padding: 16px;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.navBar__link{
+  display: inline-block;
+  text-decoration: none;
+  padding: 13px 24px 11px 12px;
+  background: transparent;
+  border-radius: 12px 0px 0px 12px;
+  transition: all 0.3s ease;
+
+  .bx{
+    color: #ea7c69;
+    font-size: 24px;
+    transition: all 0.3s ease;
+  }
+}
+
+.navBar__active{
+  background-color: #252836;
+
+  .navBar__holder{
+    background: #ea7c69;
+    box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.32);
+  }
+
+  .bx{
+    color: #fff;
+  }
+}
+
+.navBar__logout-box{
+  padding: 24px;
+}
+
+.navBar__logout-link{
+  padding: 16px;
+
+  .bx{
+    color: #ea7c69;
+    font-size: 24px;
+  }  
+}
