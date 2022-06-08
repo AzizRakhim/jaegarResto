@@ -5,7 +5,7 @@ const Foods = [{
     money: 2.3,
     theRest: 15,
     num : 1,
-    foodType: "hot-dishes"
+    foodType: "hot dishes"
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ const Foods = [{
     money: 2.69,
     theRest: 20,
     num : 1,
-    foodType: "cold-dishes"
+    foodType: "cold dishes"
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const Foods = [{
     money: 2.3,
     theRest: 15,
     num : 1,
-    foodType: "hot-dishes"
+    foodType: "cold dishes"
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const Foods = [{
     money: 2.69,
     theRest: 20,
     num : 1,
-    foodType: "cold-dishes"
+    foodType: "soup"
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const Foods = [{
     money: 3.3,
     theRest: 8,
     num : 1,
-    foodType: "soup"
+    foodType: "grill"
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ const Foods = [{
     money: 3.49,
     theRest: 6,
     num : 1,
-    foodType: "hot-dishes"
+    foodType: "appetizer"
   },
   {
     id: 8,
@@ -68,7 +68,7 @@ const Foods = [{
     money: 2.69,
     theRest: 11,
     num : 1,
-    foodType: "soup"
+    foodType: "dessert"
   },
   {
     id: 9,
@@ -77,7 +77,7 @@ const Foods = [{
     money: 2.3,
     theRest: 15,
     num : 1,
-    foodType: "hot-dishes"
+    foodType: "hot dishes"
   },
   {
     id: 10,
@@ -86,7 +86,7 @@ const Foods = [{
     money: 2.69,
     theRest: 20,
     num : 1,
-    foodType: "cold-dishes"
+    foodType: "cold dishes"
   },
   {
     id: 11,
@@ -95,7 +95,7 @@ const Foods = [{
     money: 2.3,
     theRest: 15,
     num : 1,
-    foodType: "hot-dishes"
+    foodType: "soup"
   },
   {
     id: 12,
@@ -104,7 +104,7 @@ const Foods = [{
     money: 2.69,
     theRest: 20,
     num : 1,
-    foodType: "cold-dishes"
+    foodType: "grill"
   },
   {
     id: 13,
@@ -113,7 +113,7 @@ const Foods = [{
     money: 3.3,
     theRest: 8,
     num : 1,
-    foodType: "soup"
+    foodType: "appetizer"
   },
   {
     id: 14,
@@ -122,7 +122,7 @@ const Foods = [{
     money: 1.6,
     theRest: 5,
     num : 1,
-    foodType: "soup"
+    foodType: "dessert"
   },
   {
     id: 15,
@@ -131,7 +131,7 @@ const Foods = [{
     money: 3.49,
     theRest: 14,
     num : 1,
-    foodType: "hot-dishes"
+    foodType: "hot dishes"
   },
   {
     id: 16,
@@ -140,7 +140,7 @@ const Foods = [{
     money: 2.69,
     theRest: 6,
     num : 1,
-    foodType: "soup"
+    foodType: "cold dishes"
   },
 ];
 

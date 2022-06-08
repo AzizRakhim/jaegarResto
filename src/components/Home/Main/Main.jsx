@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Main.scss";
 
 function Main(props) {
@@ -7,6 +7,75 @@ function Main(props) {
     food.num = num.length + 1;
     props.setChosen([...props.chosen, food]);
   }
+
+  let smth = [
+    {
+      id : 1,
+      name : "hot dishes",
+      active : false
+    },
+    {
+      id : 2,
+      name : "cold dishes",
+      active : false
+    },
+    {
+      id : 3,
+      name : "soup",
+      active : false
+    },
+    {
+      id : 4,
+      name : "grill",
+      active : false
+    },
+    {
+      id : 5,
+      name : "appetizer",
+      active : false
+    },
+    {
+      id : 6,
+      name : "dessert",
+      active : false
+    }
+  ]
+
+  let [arr, setArr] = useState([]);
+  let [obj, setObj] = useState([]);
+
+  useEffect(() => {
+    smth[0].active = true;
+    setArr(smth);
+  }, [setArr]);
+
+  useEffect(() => {
+    let temp = [];
+    props.obj.forEach((item) => {
+      if(item.foodType === "hot dishes"){
+        temp.push(item);
+      };
+    });
+    setObj(temp);
+    setObj(temp);
+  }, [])
+
+  const filterHandler = (elId, elName) => {
+    smth.forEach((item, index) => {
+      if(item.id === elId){
+        item.active = true;
+      }
+    })
+    setArr(smth);
+
+    let temp = [];
+    props.obj.forEach((item) => {
+      if(item.foodType === elName){
+        temp.push(item);
+      };
+    });
+    setObj(temp);
+  } 
 
   return (
     <div className='main'>
@@ -25,36 +94,22 @@ function Main(props) {
         </div>
       </div>
       <ul className='main__list d-flex'>
-        <li className='main__item'>
-          <button className='main__item-link main__active'>
-            hot dishes
-          </button>
-        </li>
-        <li className='main__item'>
-          <button className='main__item-link'>
-            cold dishes
-          </button>
-        </li>
-        <li className='main__item'>
-          <button className='main__item-link'>
-            soup
-          </button>
-        </li>
-        <li className='main__item'>
-          <button className='main__item-link'>
-            grill
-          </button>
-        </li>
-        <li className='main__item'>
-          <button className='main__item-link'>
-            appetizer
-          </button>
-        </li>
-        <li className='main__item'>
-          <button className='main__item-link'>
-            dessert
-          </button>
-        </li>
+        {
+          arr.map((item, index) => {
+            return (
+              <li 
+                className='main__item' 
+                key={"o" + index}>
+                <button 
+                  className={`main__item-link ${item.active ? "main__active" : ""}`}
+                  onClick={() => filterHandler(item.id, item.name)}
+                >
+                  {item.name}
+                </button>
+              </li>
+            )
+          })
+        }
       </ul>
       <div className='main__choose-box d-flex align-items-center justify-content-between'>
         <h3 className='main__choose'>
@@ -74,7 +129,7 @@ function Main(props) {
       </div>
       <ul className='main__food-list d-flex flex-wrap'>
         {
-          props.obj.map((food, index) => {
+          obj.map((food, index) => {
             return (
               <li className='main__food-item col-3' key={"c" + index}>
                 <div className='main__food-container' onClick={() => chooseHandler(food)}>
