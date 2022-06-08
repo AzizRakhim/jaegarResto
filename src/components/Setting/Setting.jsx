@@ -8,7 +8,7 @@ function Setting(props) {
   return (
     <div>
       <Navbar />
-      <Edit obj={props.obj} />
+      <Edit obj={props.obj} setObj={props.setObj} />
     </div>
   )
 }

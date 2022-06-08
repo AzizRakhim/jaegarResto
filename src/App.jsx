@@ -10,38 +10,40 @@ import Setting from './components/Setting/Setting';
 import { useState } from 'react';
 
 function App() {
+  let [obj, setObj] = useState(Foods);
   let [chosen, setChosen] = useState([]);
 
   return (
     <div className="App">
       <Routes>
         <Route path={"/"} element={<Home 
-          obj={Foods} 
+          obj={obj} 
           chosen={chosen}
           setChosen={setChosen}  
         />} />
         <Route path='/discount' element={<Discount 
-          obj={Foods} 
+          obj={obj} 
           chosen={chosen}
           setChosen={setChosen}
         />} />
         <Route path='/chart' element={<Chart 
-          obj={Foods} 
+          obj={obj} 
           chosen={chosen}
           setChosen={setChosen}
         />} />
         <Route path='/mail' element={<Mail 
-          obj={Foods} 
+          obj={obj} 
           chosen={chosen}
           setChosen={setChosen}
         />} />
         <Route path='/bell' element={<Bell 
-          obj={Foods} 
+          obj={obj} 
           chosen={chosen}
           setChosen={setChosen}
         />} />
         <Route path='/setting' element={<Setting 
-          obj={Foods} 
+          obj={obj} 
+          setObj={setObj}
           chosen={chosen}
           setChosen={setChosen}
         />} />

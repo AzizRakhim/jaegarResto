@@ -76,7 +76,7 @@ function Main(props) {
         {
           props.obj.map((food, index) => {
             return (
-              <li className='main__food-item col-4' key={"c" + index}>
+              <li className='main__food-item col-3' key={"c" + index}>
                 <div className='main__food-container' onClick={() => chooseHandler(food)}>
                   <div className='main__food-img-box'>
                     <img src={food.img} alt={food.title} />

@@ -11,7 +11,7 @@ function Edit(props) {
       </h2>
       <div className='edit__box d-flex'>
         <Options />
-        <Management obj={props.obj} />
+        <Management obj={props.obj} setObj={props.setObj} />
       </div>
     </div>
   )

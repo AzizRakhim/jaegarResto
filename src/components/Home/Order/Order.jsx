@@ -15,16 +15,13 @@ function Order(props) {
     setTotal(num);
     let temp = [...new Set(props.chosen.map(item => item))];
     setChanged(temp);
-  }, [props.chosen]);
+  }, [props.chosen, props.obj]);
 
   const deleteHandler = (index) => {
     props.setChosen(props.chosen.filter((el) => el.id !== index));
-    console.log(props.chosen);
     let temp = [...new Set(props.chosen.map(item => item))];
     setChanged(temp);
   }
-
-  
 
   return (
     <>
@@ -82,7 +79,7 @@ function Order(props) {
                         {item.num}
                       </div>
                       <div className='order__item-price'>
-                        ${(item.money * item.num).toFixed(2)}
+                        ${Number(item.money) * Number(item.num).toFixed(2)}
                       </div>
                     </div>
                     <div className='order__item-input-box d-flex'>
@@ -110,7 +107,7 @@ function Order(props) {
                 Sub total
               </div>
               <span className='order__num'>
-                ${total.toFixed(2)}
+                ${+total.toFixed(2)}
               </span>
             </div>
             <button className='order__confirm-btn' onClick={() => setCheck(true)}>
