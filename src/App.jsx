@@ -7,7 +7,7 @@ import Chart from './components/Chart/Chart';
 import Mail from './components/Mail/Mail';
 import Bell from './components/Bell/Bell';
 import Setting from './components/Setting/Setting';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   let [obj, setObj] = useState(Foods);

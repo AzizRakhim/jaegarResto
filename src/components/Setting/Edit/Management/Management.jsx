@@ -59,7 +59,7 @@ function Management(props) {
       };
     });
     setObj(temp);
-  }, [setObj])
+  }, [setObj, props.obj])
 
   const editHandler = (item) => {
     setIsTrue(true);
@@ -183,6 +183,7 @@ function Management(props) {
         check={check} 
         setCheck={setCheck} 
         obj={props.obj}
+        setObj={props.setObj}
       />
     </>
   )

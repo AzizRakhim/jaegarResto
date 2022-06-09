@@ -40,7 +40,7 @@
 
 .navBar__item{
   padding: 10px 0 12px 12px;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
 }
 
 .navBar__holder{
@@ -51,15 +51,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
 }
 
 .navBar__border-radius-bottom {
-  transition: all 0.3s ease;
+  transition: all 1s ease;
 }
 
 .navBar__border-radius-top {
-  transition: all 0.3s ease;
+  transition: all 1s ease;
 }
 
 .navBar__link{
@@ -68,12 +68,12 @@
   padding: 13px 24px 11px 12px;
   background: transparent;
   border-radius: 12px 0px 0px 12px;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
 
   .bx{
     color: #ea7c69;
     font-size: 24px;
-    transition: all 0.3s ease;
+    transition: all 1ads ease;
   }
 
   &:hover{
@@ -135,6 +135,19 @@
   }
   }
 }
+
+// .navBar__move{
+//   position: absolute;
+//   top: 0px;
+//   left: 0;
+//   z-index: -10;
+//   transition: all 1s ease;
+
+//   .navBar__holder{
+//     width: 56px;
+//     height: 56px;
+//   }
+// }
 
 .navBar__active{
   background-color: #252836;

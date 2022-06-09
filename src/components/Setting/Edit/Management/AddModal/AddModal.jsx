@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../ManageModal/ManageModal.scss";
 import "../../../../Home/Order/OrderModal/OrderModal.scss";
 import "./AddModal.scss";
@@ -13,6 +13,8 @@ function AddModal(props) {
     num : "",
     foodType : ""
   });
+
+  let [use, setUse] = useState(false);
 
   const nameHandler = (e) => {
     setAddObj({...addObj, title : e.target.value});
@@ -31,7 +33,7 @@ function AddModal(props) {
   }
 
   const submitHandler = (e) => {
-    props.obj.push(addObj);
+    props.setObj([addObj, ...props.obj]);
 
     setAddObj({
       id : "",
