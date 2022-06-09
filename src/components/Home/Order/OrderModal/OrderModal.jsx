@@ -70,7 +70,7 @@ function OrderModal({check, setCheck}) {
               <label htmlFor="o-modal__cv" className='o-modal__label'>
                 CVV
               </label>
-              <input type="password" id='o-modal__cv' className='o-modal__input' required placeholder='...' />
+              <input type="password" id='o-modal__cv' className='o-modal__input' required placeholder='•••' />
             </div>
           </div>
           <div className='o-modal__holder o-modal__border d-flex align-items-center'>
