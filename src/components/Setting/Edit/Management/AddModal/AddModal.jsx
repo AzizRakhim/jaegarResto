@@ -104,15 +104,21 @@ function AddModal(props) {
             <label htmlFor="m-modal__type" className='m-modal__label'>
               Food type
             </label>
-            <input 
-              type="text" 
-              name='m-modal__type' 
+            <select 
+              name="m-modal__type" 
+              id="m-modal__type" 
               className='m-modal__input' 
-              required 
-              placeholder='Food type...'
+              required
               onChange={foodTypeHandler}
-              value={addObj.foodType}
-            />
+            >
+              <option >Food Type</option>
+              <option value="hot dishes">Hot Dishes</option>
+              <option value="cold dishes">Cold Dishes</option>
+              <option value="soup">Soup</option>
+              <option value="grill">Grill</option>
+              <option value="appetizer">Appetizer</option>
+              <option value="dessert">Dessert</option>
+            </select>
           </div>
           <div className='o-modal__submit-holder m-modal__bottom d-flex'>
             <button 

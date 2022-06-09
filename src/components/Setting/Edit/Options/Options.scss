@@ -43,6 +43,34 @@
       }
     }
   }
+
+  &:hover{
+    background: #ffcbc242;
+
+    .bx{
+      color: #ea7c69;
+    }
+
+    .option__title{
+      color: #ea7c69;
+    }
+
+    .option__info{
+      &::after{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 4px;
+        height: 39px;
+        transform: translateY(-50%);
+  
+        background: #ea7c69;
+        border-radius: 30px;
+      }
+    }
+  }
 }
 
 .option__icon-holder{

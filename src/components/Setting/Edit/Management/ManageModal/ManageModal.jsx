@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./ManageModal.scss";
 import "../../../../Home/Order/OrderModal/OrderModal.scss";
 
 function ManageModal(props) {
-  let [tempTwo, setTempTwo] = useState(props.obj);
+  let [tempTwo, setTempTwo] = useState([]);
 
+  useEffect(() => {
+    setTempTwo(props.obj);
+  }, [tempTwo]);
+  
   const cancelHandler = () => {
     props.setIsTrue(false);
   }
@@ -21,16 +25,23 @@ function ManageModal(props) {
     props.setItem({...props.item, theRest : e.target.value});
   }
 
-  const confirmIthandler = () => {
+  const foodTypeHandler = (e) => {
+    props.setItem({...props.item, foodType : e.target.value});
+  }
+
+  const confirmIthandler = (e) => {
+    e.preventDefault();
+
     tempTwo.forEach((item, index) => {
       if(item.id === props.item.id){
         item.id = props.item.id;
         item.title = props.item.title;
         item.money = +props.item.money;
         item.theRest = props.item.theRest;
+        item.foodType = props.item.foodType;
       }
     })
-    console.log(props.obj);
+
     props.setIsTrue(false);
   }
 
@@ -81,6 +92,26 @@ function ManageModal(props) {
               onChange={bowlHandler}
             />
           </div>
+          <div className='m-modal__input-box'>
+            <label htmlFor="m-modal__type" className='m-modal__label'>
+              Food type
+            </label>
+            <select 
+              name="m-modal__type" 
+              id="m-modal__type" 
+              className='m-modal__input' 
+              required
+              onChange={foodTypeHandler}
+            >
+              <option >Food Type</option>
+              <option value="hot dishes">Hot Dishes</option>
+              <option value="cold dishes">Cold Dishes</option>
+              <option value="soup">Soup</option>
+              <option value="grill">Grill</option>
+              <option value="appetizer">Appetizer</option>
+              <option value="dessert">Dessert</option>
+            </select>
+          </div>
           <div className='o-modal__submit-holder m-modal__bottom d-flex'>
             <button 
               className='o-modal__cancel' 
@@ -91,7 +122,7 @@ function ManageModal(props) {
             </button>
             <button 
               className='o-modal__confirm' 
-              type='button'
+              type='submit'
               onClick={confirmIthandler}
             >
               confirm change

@@ -57,8 +57,7 @@ function Main(props) {
       };
     });
     setObj(temp);
-    setObj(temp);
-  }, [])
+  }, [setObj])
 
   const filterHandler = (elId, elName) => {
     smth.forEach((item, index) => {
@@ -77,6 +76,26 @@ function Main(props) {
     setObj(temp);
   } 
 
+  const searchHandler = (e) => {
+    let result = e.target.value;
+
+    if(result !== ""){
+      let temp = props.obj.filter((item) => item.title.toLowerCase().includes(result.toLowerCase()));
+      setObj(temp);
+    } else{
+      smth.forEach((item, index) => {
+        if(item.id === 1){
+          item.active = true;
+        }
+      })
+      setArr(smth);
+      
+      let temp = props.obj.filter((item) => item.foodType === "hot dishes");
+      setObj(temp);
+    }
+
+  }
+
   return (
     <div className='main'>
       <div className='main__header d-flex align-items-center justify-content-between'>
@@ -90,7 +109,13 @@ function Main(props) {
         </div>
         <div className='main__search-box d-flex align-items-center'>
           <i className='bx bx-search'></i>
-          <input type="text" className='main__input' name='search' placeholder='Search for food, coffe, etc..' required />
+          <input 
+            type="text" 
+            className='main__input' 
+            name='search' 
+            placeholder='Search for food, coffe, etc..' required 
+            onChange={searchHandler}
+          />
         </div>
       </div>
       <ul className='main__list d-flex'>

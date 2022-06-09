@@ -79,7 +79,7 @@ function Order(props) {
                         {item.num}
                       </div>
                       <div className='order__item-price'>
-                        ${Number(item.money) * Number(item.num).toFixed(2)}
+                        ${(Number(item.money) * Number(item.num)).toFixed(2)}
                       </div>
                     </div>
                     <div className='order__item-input-box d-flex'>

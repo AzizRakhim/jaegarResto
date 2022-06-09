@@ -154,7 +154,9 @@
 }
 
 .order__item-text-holder{
-  margin-right: 61px;
+  
+  display: flex;
+  flex-grow: 1; 
 }
 
 .order__item-title{
@@ -207,7 +209,6 @@
   flex-grow: 1;
 
   &:focus{
-    border: none;
     outline: none;
   }
 

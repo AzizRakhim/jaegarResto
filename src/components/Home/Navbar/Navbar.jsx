@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import "./Navbar.scss";
+import logo from "../../../assets/images/logo.svg";
 
 function Navbar() {
   return (
     <div className='navBar'>
       <div className='navBar__logo-box'>
         <Link to={"/"} className="navBar__logo-container">
-          <i className='bx bxs-store-alt'></i>
+          <img src={logo} alt="site logo" />
         </Link>
       </div>
       <nav className='navBar__nav'>
@@ -17,6 +18,8 @@ function Navbar() {
               <div className='navBar__holder'>
                 <i className='bx bx-home-alt'></i>
               </div>
+              <span className='navBar__border-radius-top'></span>
+              <span className='navBar__border-radius-bottom'></span>
             </NavLink>
           </li>
           <li className="navBar__item">
@@ -24,6 +27,8 @@ function Navbar() {
               <div className='navBar__holder'>
                 <i className='bx bxs-discount'></i>
               </div>
+              <span className='navBar__border-radius-top'></span>
+              <span className='navBar__border-radius-bottom'></span>
             </NavLink>
           </li>
           <li className="navBar__item">
@@ -31,6 +36,8 @@ function Navbar() {
               <div className='navBar__holder'>
                 <i className='bx bx-pie-chart-alt-2'></i>
               </div>
+              <span className='navBar__border-radius-top'></span>
+              <span className='navBar__border-radius-bottom'></span>
             </NavLink>
           </li>
           <li className="navBar__item">
@@ -38,6 +45,8 @@ function Navbar() {
               <div className='navBar__holder'>
                 <i className='bx bx-envelope' ></i>
               </div>
+              <span className='navBar__border-radius-top'></span>
+              <span className='navBar__border-radius-bottom'></span>
             </NavLink>
           </li>
           <li className="navBar__item">
@@ -45,6 +54,8 @@ function Navbar() {
               <div className='navBar__holder'>
                 <i class='bx bx-bell'></i>
               </div>
+              <span className='navBar__border-radius-top'></span>
+              <span className='navBar__border-radius-bottom'></span>
             </NavLink>
           </li>
           <li className="navBar__item">
@@ -52,6 +63,8 @@ function Navbar() {
               <div className='navBar__holder'>
                 <i className='bx bx-cog' ></i>
               </div>
+              <span className='navBar__border-radius-top'></span>
+              <span className='navBar__border-radius-bottom'></span>
             </NavLink>
           </li>
         </ul>
